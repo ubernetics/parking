@@ -1,11 +1,15 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-
+gem "rake", "0.8.7"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', '0.2.7'
+gem 'haml', '>= 3.0.0'
+gem 'haml-rails'
+gem 'formtastic'
+gem 'attrtastic'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -26,20 +30,24 @@ gem 'mysql2'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
-gem "factory_girl_rails", :group => :test
-gem "factory_girl_generator", :group => [:development, :test]
-gem "rspec-rails", :group => [:development, :test]
-gem "database_cleaner"
-gem "rspec", :group => [:development, :test]
-gem "webrat", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
-gem "cucumber", :group => [:development, :test]
-gem "cucumber-rails", :group => [:development, :test]
-gem "nokogiri"
-gem "autotest-rails", :group => [:development, :test]
-gem "autotest-growl", :group => [:development, :test]
-gem "autotest", :group => [:development, :test]
-gem "heroku", :group => [:development, :test]
+group :development, :test do
+  gem 'web-app-theme', '>= 0.6.2'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'factory_girl_rails'
+  gem 'factory_girl_generator'
+  gem 'database_cleaner'
+  gem 'webrat'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'nokogiri'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
+  gem 'autotest'
+  gem 'heroku'
+end
+
+

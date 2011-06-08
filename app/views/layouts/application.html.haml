@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %title Parking Web App
+    = stylesheet_link_tag "base", "themes/activo/style", "override", :cache => true
+    = javascript_include_tag :defaults, :cache => true
+    = csrf_meta_tag
+  %body
+    #container
+      #header
+        %h1
+        #user-navigation
+          %ul.wat-cf
+            %li
+              = link_to image_tag('/stylesheets/themes/activo/images/session/home.png', :alt => 'Home', :title => 'Home'), "#"
+            %li
+              = link_to image_tag('/stylesheets/themes/activo/images/session/account.png', :alt => 'Account', :title => 'Account'), "#"
+            %li
+              = link_to image_tag('/stylesheets/themes/activo/images/session/config.png', :alt => 'Config', :title => 'Config'), "#"
+            %li
+              = link_to image_tag('/stylesheets/themes/activo/images/session/logout.png', :alt => 'Logout', :title => 'Logout'), "#"
+        #main-navigation
+          %ul.wat-cf
+      #wrapper.wat-cf
+        .flash
+          - flash.each do |type, message|
+            %div{:class => "message #{type}"}
+              %p= message
+        #main
+          = yield
+          #footer
+            %p Copyright &copy; #{Time.now.year} Parking Web App.
+        #sidebar
+          = yield :sidebar
