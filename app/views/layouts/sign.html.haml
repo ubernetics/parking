@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Parking Web App
+    = stylesheet_link_tag "base", "themes/activo/style", "override", :cache => true
+    = csrf_meta_tag
+  %body
+    #container
+      #box
+        = yield

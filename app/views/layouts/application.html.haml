@@ -9,6 +9,7 @@
     #container
       #header
         %h1
+          = link_to "Parking Web App", "/"
         #user-navigation
           %ul.wat-cf
             %li
@@ -18,7 +19,7 @@
             %li
               = link_to image_tag('/stylesheets/themes/activo/images/session/config.png', :alt => 'Config', :title => 'Config'), "#"
             %li
-              = link_to image_tag('/stylesheets/themes/activo/images/session/logout.png', :alt => 'Logout', :title => 'Logout'), "#"
+              = link_to image_tag('/stylesheets/themes/activo/images/session/logout.png', :alt => 'Logout', :title => 'Logout'), destroy_user_session_path
         #main-navigation
           %ul.wat-cf
       #wrapper.wat-cf

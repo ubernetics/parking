@@ -10,6 +10,7 @@ gem 'haml', '>= 3.0.0'
 gem 'haml-rails'
 gem 'formtastic'
 gem 'attrtastic'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'
