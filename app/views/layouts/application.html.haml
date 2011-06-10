@@ -22,6 +22,10 @@
               = link_to image_tag('/stylesheets/themes/activo/images/session/logout.png', :alt => 'Logout', :title => 'Logout'), destroy_user_session_path
         #main-navigation
           %ul.wat-cf
+            %li{ :class => (params[:controller] == "home" ? "first active" : "first") }
+              = link_to "Home", root_path
+            %li{ :class => (params[:controller] == "tickets" ? "active" : nil) }
+              = link_to "Tickets", tickets_path
       #wrapper.wat-cf
         .flash
           - flash.each do |type, message|

@@ -2,7 +2,7 @@ class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.xml
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.paginate :page => params[:page], :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb

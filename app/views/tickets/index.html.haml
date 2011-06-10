@@ -26,8 +26,10 @@
             %td.last
               = link_to "#{t("web-app-theme.show", :default => "Show")}", ticket_path(ticket)
               |
-              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_ticket_path(ticket)} |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_ticket_path(ticket)}
+              |
               \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", ticket_path(ticket), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
       .actions-bar.wat-cf
         .actions
+          = will_paginate @tickets
 - content_for :sidebar, render(:partial => 'sidebar')

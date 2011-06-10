@@ -8,6 +8,8 @@ gem "rake", "0.8.7"
 gem 'mysql2', '0.2.7'
 gem 'haml', '>= 3.0.0'
 gem 'haml-rails'
+gem 'sass'
+gem 'will_paginate'
 gem 'formtastic'
 gem 'attrtastic'
 gem 'devise'

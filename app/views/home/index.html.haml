@@ -1,2 +1,8 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.block
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+    .inner
+      %h1 Home#index
+      %p Find me in app/views/home/index.html.haml
+- content_for :sidebar, render(:partial => 'sidebar')
