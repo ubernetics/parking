@@ -570,6 +570,9 @@ hr {
 .flash .error, .flash .error-list {
   border: 1px solid #993624;
   background: #cc4831 url("images/messages/error.png") no-repeat 10px center; }
+.flash .alert, .flash .alert-list {
+  border: 1px solid #993624;
+  background: #cc4831 url("images/messages/error.png") no-repeat 10px center; }
 .flash .warning {
   border: 1px solid #bb9004;
   background: #f9c006 url("images/messages/warning.png") no-repeat 10px center; }

@@ -1,0 +1,62 @@
+<% page_title "My Lovely Page" %>
+
+-----------
+<%= icon "delete", :large, :alt => "Delete Item" %>
+
+-----------
+<% page_title "About Us" %>
+
+<div class="block">
+  <%= secondary_navigation do |n|
+    n.item "The Company", about_path("company"), :active => true
+    n.item "Our Offices", about_path("offices")
+    n.item "Jobs", about_path("jobs"), :class => "highlighted"
+  end %>
+  <div class="content">
+    <h2>About Us</h2>
+    <div class="inner">
+      <p>We're an amazing company! We do things!</p>
+      <p>To find out more, click the tabs above.</p>
+    </div>
+  </div>
+</div>
+
+-----------
+<% page_title "News Item 3" %>
+
+<div class="block">
+  <div class="content">
+    <h2>News Item 3</h2>
+    <div class="inner">
+      <p>We've got some new news here. Read all about it!</p>
+    </div>
+  </div>
+  <%= breadcrumbs do |b|
+    b.item "Home", root_path
+    b.item "News", news_path
+    b.item "News Item 3", news_path(3), :active => true
+  end %> 
+</div>
+
+-----------
+<% page_title "News Item 3 (Admin Mode)" %>
+
+<div class="block">
+  <div class="content">
+    <%= controls do |c|
+      c.item "Delete", news_path(3), :link_options => { :method => :delete, :confirm => "Really delete News Item 3?" }, :icon => "delete"
+      c.item "Edit", edit_news_path(3), :icon => "edit"
+    end %>
+    <h2>News Item 3</h2>
+    <div class="inner">
+      <p>We've got some new news here. Read all about it!</p>
+    </div>
+  </div>
+</div>
+
+-----------
+<% content_for :head do %>
+  <script>
+    console.log('This is in the header now.')
+  </script>
+<% end %>
